@@ -1,0 +1,123 @@
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    screens: {
+      xs: '360px',
+      sm: '540px',
+      md: '768px',
+      lg: '1200px',
+      xl: '1440px',
+      '2xl': '1600px',
+      '3xl': '1920px',
+      '4xl': '2560px',
+    },
+    colors: {
+      white: '#FFFFFF',
+      black: '#0E001A',
+      blue: '#0009FF',
+      pink: '#FF1078',
+      yellow: '#FFB13D',
+      green: '#00F0AB',
+      purple: '#9709E4',
+      gray: '#D1CAF1',
+    },
+    fontFamily: {
+      regular: [
+        'Silka Regular',
+        'system-ui',
+        'sans-serif',
+      ],
+      medium: [
+        'Silka Medium',
+        'system-ui',
+        'sans-serif',
+      ],
+      semibold: [
+        'Silka Semibold',
+        'system-ui',
+        'sans-serif',
+      ],
+      italic: [
+        'Zilla Slab',
+        'system-ui',
+        'serif',
+      ],
+    },
+    letterSpacing: {
+      tightest: '-.075rem',
+      tighter: '-.05rem',
+      tight: '-.025rem',
+      normal: '0',
+      wide: '.025rem',
+      wider: '.05rem',
+      widest: '.075rem',
+    },
+    fontSize: {
+      tiny: '0.75rem',
+      xs: '0.95rem',
+      sm: '1.075rem',
+      md: '1.125rem',
+      lg: '1.25rem',
+      xl: '1.75rem',
+      '2xl': '1.875rem',
+      '3xl': '2.125rem',
+      '4xl': '2.525rem',
+      '5xl': '3.25rem',
+    },
+    backgroundSize: {
+      auto: 'auto',
+      cover: 'cover',
+      contain: 'contain',
+      '50%': '50%',
+      '100%': '100%',
+      '200%': '200%',
+    },
+    borderWidth: {
+      DEFAULT: '2px',
+      0: '0',
+      1: '1px',
+      2: '2px',
+      3: '3px',
+      4: '4px',
+      6: '6px',
+      8: '8px',
+      10: '10px',
+    },
+    borderRadius: {
+      none: '0',
+      sm: '0.25rem',
+      DEFAULT: '0.75rem',
+      md: '0.5rem',
+      lg: '1rem',
+      full: '9999px',
+    },
+    lineHeight: {
+      '3': '.75rem',
+      '4': '1rem',
+      '5': '1.25rem',
+      '6': '1.5rem',
+      '7': '1.75rem',
+      '8': '2rem',
+      '9': '2.25rem',
+      '10': '2.5rem',
+      'none': '1',
+      'tight': '1.25',
+      'snug': '1.375',
+      'normal': '1.5',
+      'relaxed': '1.625',
+      'loose': '2',
+    },
+    extend: {},
+  },
+  plugins: [
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    require('@tailwindcss/typography')
+  ],
+};
+export default config;
